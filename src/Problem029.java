@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 //Project Euler Problem 29
 //Solved on 10/7/2015
-public class Problem29
+public class Problem029
 {
 	public static void main(String[] args)
 	{
