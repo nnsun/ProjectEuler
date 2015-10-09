@@ -43,17 +43,18 @@ public class Problem035
 	}
 	
 	public static boolean isPrime(int n)	//simple method for finding primes
-	{
-		
-		boolean prime = true;
+	{		
+		if(n <= 1)
+		{
+			return false;
+		}
 		for(int i = 2; i <= Math.sqrt(n); i++)
 		{
 			if(n % i == 0)
 			{
-				prime = false;
-				break;
+				return false;
 			}
 		}
-		return prime;
+		return true;
 	}
 }
