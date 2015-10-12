@@ -28,9 +28,9 @@ public class Problem036
 		System.out.println(sum);
 	}
 	
-	public static boolean isPalindrome(String string)	//returns true if String is a palindrome, false otherwise
+	public static boolean isPalindrome(String str)	//returns true if String is a palindrome, false otherwise
 	{
-		char[] array = string.toCharArray();	//converts the String to a char array
+		char[] array = str.toCharArray();	//converts the String to a char array
 		int length = array.length;
 		
 		//goes through half of the characters and checks they match their corresponding characters on the other side of the array

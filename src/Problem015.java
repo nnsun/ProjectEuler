@@ -9,7 +9,8 @@ public class Problem015
 		BigInteger paths = factorial(40).divide(factorial(20).multiply(factorial (40 - 20)));	//paths is equal to 40 C 20
 		System.out.println(paths);
 	}
-	public static BigInteger factorial(int n)
+	
+	public static BigInteger factorial(int n)	//returns BigInteger representation of n!
 	{
 		BigInteger factorial = new BigInteger("1");
 		for(int i = n; i != 1; i--)

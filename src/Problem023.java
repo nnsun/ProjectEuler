@@ -9,7 +9,7 @@ public class Problem023
 		ArrayList<Integer> abundant = new ArrayList<Integer>();		//ArrayList for storing abundant numbers
 		for(int i = 1; i <= 28123 - 12; i++)	//loops through all numbers to populate abundant numbers list
 		{
-			if(sumOfDivisors(i) > i)	//if number is abundant...
+			if(Problem021.factorSum(i) > i)		//if number is abundant...
 			{
 				abundant.add(i);
 			}
@@ -36,20 +36,5 @@ public class Problem023
 			}
 		}
 		System.out.println(sum);
-	}
-	
-	//generates sum of divisors of n (not including n itself)
-	public static int sumOfDivisors(int n)
-	{
-		int sum = 0;
-		for(int i = 1; i <= n/2; i++)
-		{
-			if(n % i == 0)
-			{
-				sum += i;
-			}
-		}
-		
-		return sum;
 	}
 }

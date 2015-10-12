@@ -14,7 +14,7 @@ public class Problem021
 		System.out.println(sum);
 	}
 	
-	public static int factorSum(int n)
+	public static int factorSum(int n)		//returns sum of factors of n (not including n itself)
 	{
 		int sum = 0;
 		for(int i = 1; i <= n/2; i++)
