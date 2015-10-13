@@ -12,6 +12,10 @@ public class Problem015
 	
 	public static BigInteger factorial(int n)	//returns BigInteger representation of n!
 	{
+		if(n == 0)
+		{
+			return new BigInteger("1");
+		}
 		BigInteger factorial = new BigInteger("1");
 		for(int i = n; i != 1; i--)
 		{
