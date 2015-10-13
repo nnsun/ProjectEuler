@@ -1,7 +1,8 @@
 A list of useful public methods in this project
 
-Problem015.factorial(int n)				//returns BigInteger representation of n!
-Problem021.factorSum(int n)				//returns sum of factors of n (not including n itself)
-Problem035.isPrime(int n)				//returns true if n is a prime number, false otherwise
-Problem036.isPalindrome(String str)		//returns true if str is a palindrome, false otherwise
-Problem037.isTruncatablePrime(int n)	//returns true if n is a truncatable prime, false otherwise
+Problem015.factorial(int n)														//returns BigInteger representation of n!
+Problem021.factorSum(int n)														//returns sum of factors of n (not including n itself)
+Problem024.permute(String str, String temp, ArrayList<String> permutations)		//returns ArrayList of all possible combinations of characters in str
+Problem035.isPrime(int n)														//returns true if n is a prime number, false otherwise
+Problem036.isPalindrome(String str)												//returns true if str is a palindrome, false otherwise
+Problem037.isTruncatablePrime(int n)											//returns true if n is a truncatable prime, false otherwise
