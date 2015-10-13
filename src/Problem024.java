@@ -14,7 +14,7 @@ public class Problem024
 	}
 	
 	//returns ArrayList of all possible combinations of characters in str; temp and permutations should both be empty at initial call
-	private static ArrayList<String> permute(String str, String temp, ArrayList<String> permutations)	
+	public static ArrayList<String> permute(String str, String temp, ArrayList<String> permutations)	
 	{
 	    int n = str.length();
 	    if (n == 0)		//if all characters have been used up to build a permutation, add it to the ArrayList
