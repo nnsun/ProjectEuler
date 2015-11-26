@@ -81,7 +81,7 @@ public class Problem018
 			}
 		}
 		
-		maxSum += 75;
+		maxSum += row0[0];
 		System.out.println(maxSum);
 	}
 }
