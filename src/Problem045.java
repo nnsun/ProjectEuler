@@ -6,7 +6,6 @@ public class Problem045
 		long n = 0;
 		long j = 0;
 		long k = 0;
-		long temp;
 		for(long i = 286; i >= 0; i++)
 		{
 			n = i * (i+1) / 2;
@@ -21,9 +20,6 @@ public class Problem045
 				}
 			}
 		}
-		
 		System.out.println(n);
-		System.out.println(j);
-		System.out.println(k);
 	}
 }
