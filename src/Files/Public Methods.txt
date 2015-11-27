@@ -6,3 +6,5 @@ Problem024.permute(String str, String temp, ArrayList<String> permutations)		//r
 Problem035.isPrime(int n)														//returns true if n is a prime number, false otherwise
 Problem036.isPalindrome(String str)												//returns true if str is a palindrome, false otherwise
 Problem037.isTruncatablePrime(int n)											//returns true if n is a truncatable prime, false otherwise
+Problem069.GCD(int a, int b)													//returns greatest common divisor of a and b
+Problem069.relativePrimes(int n)												//returns ArrayList<Integer> of all relative primes of n
