@@ -16,7 +16,7 @@ public class Problem057
 			BigInteger prevDen = den;		//so those are stored here
 			
 			//calculating current iteration's numerator and denominators
-			den = prevNum.subtract(prevDen).add(prevDen.add(prevDen));
+			den = prevNum.add(prevDen);
 			num = prevDen.add(den);
 			
 			if(prevNum.toString(10).length() > prevDen.toString(10).length())		//if numerator has more digits than denominator, increment count
