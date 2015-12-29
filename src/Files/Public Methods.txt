@@ -8,3 +8,4 @@ Problem036.isPalindrome(String str)												//returns true if str is a palind
 Problem037.isTruncatablePrime(int n)											//returns true if n is a truncatable prime, false otherwise
 Problem069.GCD(int a, int b)													//returns greatest common divisor of a and b
 Problem069.relativePrimes(int n)												//returns ArrayList<Integer> of all relative primes of n
+Problem092.digitSquresSum(int n)												//returns sum of the square of each digit in n
