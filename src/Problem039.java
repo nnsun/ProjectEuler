@@ -20,16 +20,17 @@ public class Problem039
 					int c = (int)Math.sqrt(a*a + b*b);		//finds c
 					if(a+b+c == p && a*a + b*b == c*c)		//checks if c is a valid value for right triangle
 					{
-						int[] triple = {1, 2, 3};		//creates the triple for this specific solution
+						int[] triple = {a, b, c};		//creates the triple for this specific solution
 						Arrays.sort(triple);
 						if(triples.size() != 0)		//if there are already solutions for this p...
 						{
 							boolean matching = false;		//keeps track if triple has already been created
 							for(int i = 0; i < triples.size(); i++)		
 							{
-								if(triples.get(i).equals(triple))		
+								if(Arrays.equals(triples.get(i), triple))		
 								{
 									matching = true;
+									break;
 								}
 							}
 							if(!matching)		//if triple has not been added, add triples to collection and increment solutions for this p
