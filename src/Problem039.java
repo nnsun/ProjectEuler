@@ -24,13 +24,18 @@ public class Problem039
 						Arrays.sort(triple);
 						if(triples.size() != 0)		//if there are already solutions for this p...
 						{
-							for(int i = 0; i < triples.size(); i++)		//checks if this triple has already been created
+							boolean matching = false;		//keeps track if triple has already been created
+							for(int i = 0; i < triples.size(); i++)		
 							{
-								if(!triples.get(i).equals(triple))		//if not, add triples to collection and increment solutions for this p
+								if(triples.get(i).equals(triple))		
 								{
-									triples.add(triple);
-									solutions++;
+									matching = true;
 								}
+							}
+							if(!matching)		//if triple has not been added, add triples to collection and increment solutions for this p
+							{
+								triples.add(triple);
+								solutions++;
 							}
 						}
 						else		//if there are no current solutions for this p...
