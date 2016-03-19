@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 //Project Euler Problem 22
+//Solved on 10/3/2015
 public class Problem022
 {
 	public static void main(String[] args)

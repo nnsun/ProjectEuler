@@ -1,4 +1,5 @@
 //Project Euler Problem 6
+//Solved on 12/28/2014
 public class Problem006
 {
 	public static void main(String[] args)

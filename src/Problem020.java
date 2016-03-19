@@ -1,6 +1,7 @@
 import java.math.BigInteger;
 
 //Project Euler Problem 20
+//Solved on 12/30/2014
 public class Problem020
 {
 	public static void main (String[] args) throws java.lang.Exception

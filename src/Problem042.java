@@ -4,7 +4,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-//Project Euler Problem 24
+//Project Euler Problem 42
+//Solved on 9/29/2015
 public class Problem042
 {
 	public static void main(String[] args) throws IOException

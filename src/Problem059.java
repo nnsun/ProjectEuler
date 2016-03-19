@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 //Project Euler Problem 59
+//Solved on 9/29/2015
 public class Problem059
 {
 	//the solution involves brute forcing the possible keys until a decryption with coherent words is found.

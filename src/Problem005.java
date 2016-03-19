@@ -1,4 +1,5 @@
 //Project Euler Problem 5
+//Solved on 12/28/2014
 //Easily solvable without using a program
 public class Problem005
 {

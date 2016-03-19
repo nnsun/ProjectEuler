@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 //Project Euler Problem 36
+//Solved on 9/28/2015
 public class Problem036
 {
 	public static void main(String[] args)

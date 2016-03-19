@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 //Project Euler Problem 67
+//Solved on 9/27/2015
 public class Problem067
 {
 	public static void main(String[] args)

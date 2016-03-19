@@ -1,4 +1,5 @@
 //Project Euler Problem 14
+//Solved on 12/28/2014
 public class Problem014
 {
 	public static void main (String[] args) throws java.lang.Exception
