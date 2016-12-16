@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-//Project Euler Problem 43
-//Solved on 10/13/2015
+// Project Euler problem 43
+// Solved on 10/13/2015
 public class Problem043
 {
 	public static void main(String[] args)
 	{
 		long sum = 0;
 		ArrayList<String> pandigitals = new ArrayList<String>();
-		pandigitals = Problem024.permute("0123456789", "", pandigitals);	//array list of all permutations of 0-9 pandigital numbers
-		Collections.sort(pandigitals);		//sort pandigitals
-		pandigitals.subList(0, 362880).clear();		//remove all permutations that start with 0 (total of 9! or 362880)
-		for(int i = 0; i < pandigitals.size(); i++)		//loop through all remaining pandigitals to find ones that satisfy the requirement
+		pandigitals = Problem024.permute("0123456789", "", pandigitals);	// array list of all permutations of 0-9 pandigital numbers
+		Collections.sort(pandigitals);		// sort pandigitals
+		pandigitals.subList(0, 362880).clear();		// remove all permutations that start with 0 (total of 9! or 362880)
+		for(int i = 0; i < pandigitals.size(); i++)		// loop through all remaining pandigitals to find ones that satisfy the requirement
 		{
 			String temp = pandigitals.get(i);
 			if(Long.parseLong(temp.substring(1, 4)) % 2 == 0)
@@ -29,7 +29,7 @@ public class Problem043
 								{
 									if(Long.parseLong(temp.substring(7, 10)) % 17 == 0)
 									{
-										sum += Long.parseLong(temp);	//add pandigital that satisfies requirement to sum
+										sum += Long.parseLong(temp);	// add pandigital that satisfies requirement to sum
 									}
 								}
 							}

@@ -1,5 +1,5 @@
-//Project Euler Problem 21
-//Solved on 9/7/2015
+// Project Euler problem 21
+// Solved on 9/7/2015
 public class Problem021
 {
 	public static void main(String[] args)
@@ -15,7 +15,7 @@ public class Problem021
 		System.out.println(sum);
 	}
 	
-	public static int factorSum(int n)		//returns sum of factors of n (not including n itself)
+	public static int factorSum(int n)		// returns sum of factors of n (not including n itself)
 	{
 		int sum = 0;
 		for(int i = 1; i <= n/2; i++)

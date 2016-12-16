@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 
-//Project Euler Problem 25
-//Solved on 1/17/2015
+// Project Euler problem 25
+// Solved on 1/17/2015
 public class Problem025
 {
 	public static void main(String[] args)

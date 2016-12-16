@@ -4,17 +4,17 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-//Project Euler Problem 67
-//Solved on 9/27/2015
+// Project Euler problem 67
+// Solved on 9/27/2015
 public class Problem067
 {
 	public static void main(String[] args)
 	{
-		ArrayList<String> lineList = new ArrayList<String>();	//ArrayList for String representations of each line
-		Path path = Paths.get("src/Files/p067_triangle.txt");	//Path to text file
+		ArrayList<String> lineList = new ArrayList<String>();	// ArrayList for String representations of each line
+		Path path = Paths.get("src/Files/p067_triangle.txt");	// Path to text file
 		try
 		{
-			for(String line : Files.readAllLines(path))		//populates ArrayList with lines
+			for(String line : Files.readAllLines(path))		// populates ArrayList with lines
 			{
 				lineList.add(line);	
 			}
@@ -24,10 +24,10 @@ public class Problem067
 			e.printStackTrace();
 		}
 		
-		int numberOfLines = lineList.size();	//number of rows in the triangle
-		int[][] numberList = new int[100][];	//array that will contain the numerical values of the triangle
+		int numberOfLines = lineList.size();	// number of rows in the triangle
+		int[][] numberList = new int[100][];	// array that will contain the numerical values of the triangle
 		
-		//populates the array with numerical values. Array has 100 rows and the number of columns in each row equals the row number
+		// populates the array with numerical values. Array has 100 rows and the number of columns in each row equals the row number
 		for(int i = 0; i < numberOfLines; i++)	
 		{
 			numberList[i] = new int[i + 1];
@@ -36,14 +36,14 @@ public class Problem067
 			{
 				switch (j % 3)
 				{
-					case 0:		//the first digit in each number in the triangle appears every three characters starting at the zeroth element
+					case 0:		// the first digit in each number in the triangle appears every three characters starting at the zeroth element
 						digit = 10 * Integer.parseInt(Character.toString(lineList.get(i).charAt(j)));
 						break;
-					case 1:		//the second digit in each number in the triangle appears every three characters starting at the 
-								//first element (zero-based numbering)
+					case 1:		// the second digit in each number in the triangle appears every three characters starting at the 
+								// first element (zero-based numbering)
 						digit += Integer.parseInt(Character.toString(lineList.get(i).charAt(j)));
 						break;
-					case 2:		//every 3 characters starting at the 2nd element (with zero-based numbering) is a space
+					case 2:		// every 3 characters starting at the 2nd element (with zero-based numbering) is a space
 						numberList[i][(j-2)/3] = digit;
 						digit = 0;
 						break;

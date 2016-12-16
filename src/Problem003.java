@@ -1,5 +1,5 @@
-//Project Euler Problem 3
-//Solved on 12/28/2014
+// Project Euler problem 3
+// Solved on 12/28/2014
 public class Problem003
 {
 	public static void main(String[] args)

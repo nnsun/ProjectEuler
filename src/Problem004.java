@@ -1,5 +1,5 @@
-//Project Euler Problem 4
-//Solved on 12/29/2014
+// Project Euler problem 4
+// Solved on 12/29/2014
 public class Problem004
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -21,8 +21,8 @@ public class Problem004
 		
 	}
 	
-	//takes a 6 digit number, ABCDEF and creates an array of its digits: {A,B,C,D,E,F}
-	//Jan 10, 2015: better method would've been just to convert it into a string and create an array. Thanks Adam!
+	// takes a 6 digit number, ABCDEF and creates an array of its digits: {A,B,C,D,E,F}
+	// Jan 10, 2015: better method would've been just to convert it into a string and create an array. Thanks Adam!
 	public static int[] toArray(int n)
 	{
 		int[] array = new int[6];

@@ -7,34 +7,34 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-//Project Euler Problem 54
-//Solved on 11/26/2015
-//Implementation could've been simpler but I wanted to get some experience with using Maps in Java.
+// Project Euler problem 54
+// Solved on 11/26/2015
+// Implementation could've been simpler but I wanted to get some experience with using Maps in Java.
 public class Problem054
 {
 	public static void main(String[] args) throws IOException
 	{
-		String[] hands = new String[1000];		//holds all hands in the file
+		String[] hands = new String[1000];		// holds all hands in the file
 		Path path = Paths.get("src/Files/p054_poker.txt");
 		int index = 0;
-		for(String line : Files.readAllLines(path))		//reads all hands and puts them in an array with one hand for each line
+		for(String line : Files.readAllLines(path))		// reads all hands and puts them in an array with one hand for each line
 		{
 			hands[index] = line;
 			index++;
 		}
 		
-		int wins = 0;		//number of wins for player 1
-		for(int i = 0; i < hands.length; i++)		//goes through each hand
+		int wins = 0;		// number of wins for player 1
+		for(int i = 0; i < hands.length; i++)		// goes through each hand
 		{
-			String player1Str = hands[i].substring(0, 14);		//splits up the hand by player
+			String player1Str = hands[i].substring(0, 14);		// splits up the hand by player
 			String player2Str = hands[i].substring(15);
-			String[] player1 = player1Str.split(" ");		//splits the cards up and puts them into a string array
+			String[] player1 = player1Str.split(" ");		// splits the cards up and puts them into a string array
 			String[] player2 = player2Str.split(" ");
 			
-			int player1Score = 0;	//scores for each player
+			int player1Score = 0;	// scores for each player
 			int player2Score = 0;
 
-			Map<String, Integer> player1Suits = new HashMap<String, Integer>();		//creates a hash map for suits for both players
+			Map<String, Integer> player1Suits = new HashMap<String, Integer>();		// creates a hash map for suits for both players
 			Map<String, Integer> player2Suits = new HashMap<String, Integer>();
 			player1Suits.put("Hearts", 0);
 			player1Suits.put("Diamonds", 0);
@@ -45,7 +45,7 @@ public class Problem054
 			player2Suits.put("Clubs", 0);
 			player2Suits.put("Spades", 0);
 			
-			Map<Integer, Integer> player1Numbers = new LinkedHashMap<Integer, Integer>();	//linked hash map for card numbers for both players
+			Map<Integer, Integer> player1Numbers = new LinkedHashMap<Integer, Integer>();	// linked hash map for card numbers for both players
 			Map<Integer, Integer> player2Numbers = new LinkedHashMap<Integer, Integer>();
 			player1Numbers.put(2, 0);
 			player1Numbers.put(3, 0);
@@ -74,15 +74,15 @@ public class Problem054
 			player2Numbers.put(13, 0);
 			player2Numbers.put(14, 0);
 			
-			//arrays storing card numbers for each player. Was added after hash map implementations, used for high card tiebreakers
+			// arrays storing card numbers for each player. Was added after hash map implementations, used for high card tiebreakers
 			int[] player1NumbersArray = new int[5];		
 			int[] player2NumbersArray = new int[5];
 			
-			for(int j = 0; j < player1.length; j++)		//goes through cards for player 1
+			for(int j = 0; j < player1.length; j++)		// goes through cards for player 1
 			{
 				for(int k = 0; k < player1[j].length(); k++)
 				{
-					switch(player1[j].charAt(k))	//adds number of each suit and card number into the appropriate hash map element
+					switch(player1[j].charAt(k))	// adds number of each suit and card number into the appropriate hash map element
 					{
 						case 'H':
 							player1Suits.put("Hearts", player1Suits.get("Hearts") + 1);
@@ -152,7 +152,7 @@ public class Problem054
 					}
 				}
 			}
-			for(int j = 0; j < player2.length; j++)		//same thing for player 2
+			for(int j = 0; j < player2.length; j++)		// same thing for player 2
 			{
 				for(int k = 0; k < player2[j].length(); k++)
 				{
@@ -227,13 +227,13 @@ public class Problem054
 				}
 			}
 			
-			Arrays.sort(player1NumbersArray);		//sorts card numbers
+			Arrays.sort(player1NumbersArray);		// sorts card numbers
 			Arrays.sort(player2NumbersArray);
 			
-			boolean player1Flush = false;		//variable for whether or not player 1 has a flush
-			for(String suits : player1Suits.keySet())		//goes through each key
+			boolean player1Flush = false;		// variable for whether or not player 1 has a flush
+			for(String suits : player1Suits.keySet())		// goes through each key
 			{
-				if(player1Suits.get(suits) == 5)	//if there are five cards with same suit, it's a flush
+				if(player1Suits.get(suits) == 5)	// if there are five cards with same suit, it's a flush
 				{
 					player1Flush = true;
 					break;
@@ -244,16 +244,16 @@ public class Problem054
 				}
 			}
 			
-			boolean player1Straight = false;	//whether there's a straight
-			int player1Pair = 0;		//card number of pair, 0 if non-existent
-			int[] player1TwoPair = {0, 0};		//array with card numbers of two pairs, {0, 0} if non-existent
-			int player1Three = 0;		//card number of triples
-			int[] player1Full = {0, 0};		//card numbers of triple and double in full house
-			int player1Four = 0;		//card number of four of a kind
-			int player1Lowest = 0;		//card number of the lowest card
-			int player1Consecutive = 0;		//consecutive cards, variable used for determining straight
+			boolean player1Straight = false;	// whether there's a straight
+			int player1Pair = 0;		// card number of pair, 0 if non-existent
+			int[] player1TwoPair = {0, 0};		// array with card numbers of two pairs, {0, 0} if non-existent
+			int player1Three = 0;		// card number of triples
+			int[] player1Full = {0, 0};		// card numbers of triple and double in full house
+			int player1Four = 0;		// card number of four of a kind
+			int player1Lowest = 0;		// card number of the lowest card
+			int player1Consecutive = 0;		// consecutive cards, variable used for determining straight
 			
-			for(int numbers : player1Numbers.keySet())		//checks if cards form a straight
+			for(int numbers : player1Numbers.keySet())		// checks if cards form a straight
 			{	
 				if(player1Consecutive == 0 && player1Numbers.get(numbers) == 1)
 				{
@@ -279,7 +279,7 @@ public class Problem054
 				}
 			}
 			
-			for(int numbers : player1Numbers.keySet())		//checks if cards form a pair, two pair, triple, full house, or four of a kind
+			for(int numbers : player1Numbers.keySet())		// checks if cards form a pair, two pair, triple, full house, or four of a kind
 			{
 				if(player1Numbers.get(numbers) == 2)
 				{
@@ -316,7 +316,7 @@ public class Problem054
 				}
 			}
 			
-			//assigns scores to the cards held
+			// assigns scores to the cards held
 			if(player1Straight && player1Lowest == 10 && player1Flush)		
 			{
 				player1Score = 9;
@@ -354,7 +354,7 @@ public class Problem054
 				player1Score = 1;
 			}
 			
-			//same thing, for player 2
+			// same thing, for player 2
 			boolean player2Flush = false;
 			for(String suits : player2Suits.keySet())
 			{
@@ -478,7 +478,7 @@ public class Problem054
 				player2Score = 1;
 			}
 
-			if(player1Score == player2Score)	//tiebreakers
+			if(player1Score == player2Score)	// tiebreakers
 			{
 				switch(player1Score)
 				{	
@@ -706,7 +706,7 @@ public class Problem054
 				
 			}
 			
-			if(player1Score > player2Score)		//if player 1 beats player 2, increment number of wins
+			if(player1Score > player2Score)		// if player 1 beats player 2, increment number of wins
 			{
 				wins++;
 			}

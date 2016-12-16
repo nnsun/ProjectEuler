@@ -1,5 +1,5 @@
-//Project Euler Problem 11
-//Solved on 1/10/2015
+// Project Euler problem 11
+// Solved on 1/10/2015
 public class Problem011
 {
 	public static void main(String[] args)
@@ -24,7 +24,7 @@ public class Problem011
 		int largest = 0;
 		int temp = 1;
 		
-		//check all horizontal multiples
+		// check all horizontal multiples
 		for(int i = 0; i < 20; i++)
 		{
 			for(int j = 0; j < 17; j++)
@@ -38,7 +38,7 @@ public class Problem011
 			}
 		}
 		
-		//check all vertical multiples
+		// check all vertical multiples
 		for(int i = 0; i < 17; i++)
 		{
 			for(int j = 0; j < 20; j++)
@@ -52,7 +52,7 @@ public class Problem011
 			}
 		}
 		
-		//check all downwards diagonal multiples
+		// check all downwards diagonal multiples
 		for(int i = 0; i < 17; i++)
 		{
 			for(int j = 0; j < 17; j++)
@@ -66,7 +66,7 @@ public class Problem011
 			}
 		}
 		
-		//check all upwards diagonal multiples
+		// check all upwards diagonal multiples
 		for(int i = 3; i < 20; i++)
 		{
 			for(int j = 0; j < 17; j++)

@@ -1,5 +1,5 @@
-//Project Euler Problem 28
-//Solved on 1/25/2015
+// Project Euler problem 28
+// Solved on 1/25/2015
 public class Problem028
 {
 	public static void main(String[] args)
@@ -9,7 +9,7 @@ public class Problem028
 		int xPos = 1000;
 		int bound = 0;
 		
-		for(int i = 1002001; i > 0; i--)	//populate the array
+		for(int i = 1002001; i > 0; i--)	// populate the array
 		{
 			if((yPos == bound) && (xPos > bound))
 			{
@@ -48,7 +48,7 @@ public class Problem028
 		}
 
 		int sum = 0;
-		for(int i = 0; i < 1001; i++)	//add the diagonals
+		for(int i = 0; i < 1001; i++)	// add the diagonals
 		{
 			sum += spiralArray[i][i];
 			sum += spiralArray[1000 - i][i];

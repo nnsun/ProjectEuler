@@ -1,13 +1,13 @@
-//Project Euler Problem 17
-//Solved on 1/17/2015
+// Project Euler problem 17
+// Solved on 1/17/2015
 public class Problem017
 {
 	public static void main(String[] args)
 	{
 		int sum = 0;
 		
-		int sumUnder10 = 3 + 3 + 5 + 4 + 4 + 3 + 5 + 5 + 4;		//36
-		int sum10to19 = 3 + 6 + 6 + 8 + 8 + 7 + 7 + 9 + 8 + 8;	//70
+		int sumUnder10 = 3 + 3 + 5 + 4 + 4 + 3 + 5 + 5 + 4;		// 36
+		int sum10to19 = 3 + 6 + 6 + 8 + 8 + 7 + 7 + 9 + 8 + 8;	// 70
 		int twenty = 6;
 		int thirty = 6;
 		int forty = 5;

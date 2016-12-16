@@ -1,5 +1,5 @@
-//Project Euler Problem 8
-//Solved on 12/29/2014
+// Project Euler problem 8
+// Solved on 12/29/2014
 public class Problem008
 {
 	public static void main (String[] args) throws java.lang.Exception

@@ -1,17 +1,17 @@
 import java.math.BigInteger;
 
-//Project Euler Problem 15
-//Solved on 12/28/2014
-//Easily solvable without using a program
+// Project Euler problem 15
+// Solved on 12/28/2014
+// Easily solvable without using a program
 public class Problem015
 {
 	public static void main(String[] args)
 	{
-		BigInteger paths = factorial(40).divide(factorial(20).multiply(factorial (40 - 20)));	//paths is equal to 40 C 20
+		BigInteger paths = factorial(40).divide(factorial(20).multiply(factorial (40 - 20)));	// paths is equal to 40 C 20
 		System.out.println(paths);
 	}
 	
-	public static BigInteger factorial(int n)	//returns BigInteger representation of n!
+	public static BigInteger factorial(int n)	// returns BigInteger representation of n!
 	{
 		if(n == 0)
 		{
